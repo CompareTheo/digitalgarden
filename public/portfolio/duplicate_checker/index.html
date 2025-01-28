@@ -40,14 +40,14 @@
   <meta itemprop="description" content="Checks GOBI cart exports against Alma to identify owned titles.">
   <meta itemprop="datePublished" content="2023-11-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2023-11-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="112">
+  <meta itemprop="wordCount" content="485">
 
   
   <meta itemprop="name" content="GOBI Duplicate Purchase Checker">
   <meta itemprop="description" content="Checks GOBI cart exports against Alma to identify owned titles.">
   <meta itemprop="datePublished" content="2023-11-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2023-11-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="112">
+  <meta itemprop="wordCount" content="485">
 </head>
 <body class="flex relative h-full min-h-screen"><aside
   class="will-change-transform transform transition-transform -translate-x-full absolute top-0 left-0 md:relative md:translate-x-0 w-3/4 md:basis-60 h-full min-h-screen p-3 bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col gap-2.5 z-20 sidebar flex-shrink-0">
@@ -217,10 +217,28 @@
 
     
 
-    <p>Croissant orange croissant dolor orange croissant. Lollipop biscuit donut vanilla sweet croissant. Apple donut candy tiramisu cream jelly. Croissant sweet cookie vanilla tiramisu dolor.</p>
-<p>Pastry jelly cookie sugar donut orange. Candy sweet cookie sweet donut marzipan. Vanilla cookie sprinkles pastry orange cookie. Marzipan donut ipsum sugar biscuit vanilla.</p>
-<p>Candy cookie muffin pastry lollipop vanilla. Apple orange tiramisu jelly ipsum sugar. Candy cake orange ipsum orange muffin. Sugar pastry orange cream orange pastry.</p>
-<p>Marzipan vanilla cookie biscuit jelly muffin ipsum cream vanilla tiramisu. Marzipan vanilla sweet tiramisu pastry cake jelly jelly pastry cake. Cookie sweet donut candy pastry apple dolor orange lollipop biscuit. Muffin cream ipsum ipsum sprinkles sugar tiramisu pastry sweet tiramisu.</p>
+    <p>The <strong>GOBI Duplicate Purchase Checker</strong> is a helpful tool for libraries using the GOBI platform and Alma to streamline acquisitions workflows. By automating the process of checking for duplicate holdings in Alma’s Institution Zone (IZ) via the SRU (Search/Retrieve via URL) protocol, it reduces manual effort and supports more efficient collection management.</p>
+<p>The original version of this tool, developed by <a href="https://github.com/MrJeremyHobbs/GobiChecker"  target="_blank" rel="noopener" >Jeremy Hobbs</a>, was designed for institutions using both an Institution Zone (IZ) and a Network Zone (NZ). However, since Loyola Marymount University operates without a Network Zone, I adapted the script to better fit our specific needs. These changes aim to expand the tool’s usefulness for libraries like ours and refine its functionality to address nuances in our acquisitions workflows.</p>
+<h3 id="original-purpose-of-gobichecker">Original Purpose of GobiChecker</h3>
+<p>Jeremy Hobbs’ original GobiChecker script provided an efficient way to identify duplicate holdings in Alma based on ISBN, title, or keywords. It was designed to prevent redundant acquisitions and improve collection management. However, its initial reliance on a Network Zone meant that libraries with only an Institution Zone couldn’t fully benefit from its capabilities.</p>
+<h3 id="key-updates">Key Updates</h3>
+<p>To better suit our library’s requirements, I made several updates to the original script:</p>
+<h4 id="1-support-for-iz-only-institutions">1. Support for IZ-Only Institutions</h4>
+<p>I adjusted the script to work seamlessly for institutions that operate solely within an Institution Zone (IZ). This modification ensures the tool can assist a broader range of libraries without requiring a Network Zone.</p>
+<h4 id="2-recognizing-intentional-duplicates">2. Recognizing Intentional Duplicates</h4>
+<p>Some duplicate purchases are intentional, such as ordering multiple copies of the same title or acquiring both print and electronic formats. To address this, I added parsing logic that identifies and excludes intentional duplicates from the report. This refinement helps staff focus on unintentional duplicates while respecting deliberate acquisitions.</p>
+<h4 id="3-electronic-holdings-identification">3. Electronic Holdings Identification</h4>
+<p>To enhance the tool’s precision, I integrated functionality to identify electronic holdings in Alma. By referencing an <code>elookup</code> file, the script can determine whether a duplicate is genuinely owned or part of a temporary or subscribed collection, helping clarify the library’s actual holdings.</p>
+<h4 id="4-improved-output-for-staff-workflows">4. Improved Output for Staff Workflows</h4>
+<p>I refined the script’s output to align with our library’s workflows, including:</p>
+<ul>
+<li>Removing irrelevant fields like publisher and network zone matches.</li>
+<li>Formatting columns for better readability and consistency.</li>
+<li>Adding practical features like right-click options to copy titles or ISBNs directly from the results.</li>
+</ul>
+<h3 id="why-these-changes-matter">Why These Changes Matter</h3>
+<p>These updates were designed with flexibility and usability in mind. They aim to make the tool more applicable to libraries with varying workflows while maintaining its core purpose of streamlining acquisitions processes. By building on Jeremy Hobbs’ original work, I hope these enhancements make GobiChecker more accessible and useful to other institutions facing similar challenges.</p>
+<p>The improvements to GobiChecker highlight the strength of open-source software: its adaptability and potential for growth through collaboration. I’m grateful to contribute to an already valuable tool and hope these updates help others in the library community save time and effort in managing acquisitions.</p>
 
   </article>
 

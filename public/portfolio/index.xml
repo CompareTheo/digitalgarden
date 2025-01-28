@@ -16,6 +16,13 @@
       <description>&lt;p&gt;Tiramisu sprinkles marzipan lollipop marzipan dolor. Jelly candy marzipan vanilla candy ipsum. Sugar croissant lollipop vanilla cream marzipan. Sprinkles croissant cream dolor jelly marzipan.&lt;/p&gt;&#xA;&lt;p&gt;Pastry jelly cookie sugar donut orange. Candy sweet cookie sweet donut marzipan. Vanilla cookie sprinkles pastry orange cookie. Marzipan donut ipsum sugar biscuit vanilla.&lt;/p&gt;&#xA;&lt;p&gt;Candy cookie muffin pastry lollipop vanilla. Apple orange tiramisu jelly ipsum sugar. Candy cake orange ipsum orange muffin. Sugar pastry orange cream orange pastry.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Alma License Creation Script</title>
+      <link>http://localhost:1313/portfolio/license_creation/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/license_creation/</guid>
+      <description>&lt;h1 id=&#34;placeholder-text-example&#34;&gt;Placeholder Text Example&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat dolor sit amet nunc dictum, a vehicula justo dapibus. Vivamus in lorem tincidunt, tincidunt justo a, tincidunt urna. Fusce interdum mauris ac interdum fermentum. Suspendisse sit amet tincidunt eros. Donec auctor turpis sit amet ante volutpat, id consequat eros sollicitudin. Sed at eros ac nisl aliquam vulputate. Nunc congue, enim non vehicula dictum, tortor felis varius leo, ut laoreet dui velit id turpis. Integer fringilla purus vitae arcu vehicula, eget varius erat pharetra.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>OCLC Work ID Retrieval Script</title>
       <link>http://localhost:1313/portfolio/work_id/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
@@ -27,7 +34,14 @@
       <link>http://localhost:1313/portfolio/duplicate_checker/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/portfolio/duplicate_checker/</guid>
-      <description>&lt;p&gt;Croissant orange croissant dolor orange croissant. Lollipop biscuit donut vanilla sweet croissant. Apple donut candy tiramisu cream jelly. Croissant sweet cookie vanilla tiramisu dolor.&lt;/p&gt;&#xA;&lt;p&gt;Pastry jelly cookie sugar donut orange. Candy sweet cookie sweet donut marzipan. Vanilla cookie sprinkles pastry orange cookie. Marzipan donut ipsum sugar biscuit vanilla.&lt;/p&gt;&#xA;&lt;p&gt;Candy cookie muffin pastry lollipop vanilla. Apple orange tiramisu jelly ipsum sugar. Candy cake orange ipsum orange muffin. Sugar pastry orange cream orange pastry.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;strong&gt;GOBI Duplicate Purchase Checker&lt;/strong&gt; is a helpful tool for libraries using the GOBI platform and Alma to streamline acquisitions workflows. By automating the process of checking for duplicate holdings in Alma’s Institution Zone (IZ) via the SRU (Search/Retrieve via URL) protocol, it reduces manual effort and supports more efficient collection management.&lt;/p&gt;&#xA;&lt;p&gt;The original version of this tool, developed by &lt;a href=&#34;https://github.com/MrJeremyHobbs/GobiChecker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34; &gt;Jeremy Hobbs&lt;/a&gt;, was designed for institutions using both an Institution Zone (IZ) and a Network Zone (NZ). However, since Loyola Marymount University operates without a Network Zone, I adapted the script to better fit our specific needs. These changes aim to expand the tool’s usefulness for libraries like ours and refine its functionality to address nuances in our acquisitions workflows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alma Vendor Creation Script</title>
+      <link>http://localhost:1313/portfolio/vendor_creation/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/vendor_creation/</guid>
+      <description>&lt;h1 id=&#34;placeholder-text-example&#34;&gt;Placeholder Text Example&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat dolor sit amet nunc dictum, a vehicula justo dapibus. Vivamus in lorem tincidunt, tincidunt justo a, tincidunt urna. Fusce interdum mauris ac interdum fermentum. Suspendisse sit amet tincidunt eros. Donec auctor turpis sit amet ante volutpat, id consequat eros sollicitudin. Sed at eros ac nisl aliquam vulputate. Nunc congue, enim non vehicula dictum, tortor felis varius leo, ut laoreet dui velit id turpis. Integer fringilla purus vitae arcu vehicula, eget varius erat pharetra.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -17,11 +17,17 @@
     <loc>http://localhost:1313/portfolio/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/license_creation/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/work_id/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/duplicate_checker/</loc>
     <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/vendor_creation/</loc>
+    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
