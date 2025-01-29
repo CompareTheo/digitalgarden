@@ -35,10 +35,12 @@
     <loc>http://localhost:1313/portfolio/vendor_creation/</loc>
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/documentation/sccp/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/documentation/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/documentation/</loc>
   </url>
 </urlset>

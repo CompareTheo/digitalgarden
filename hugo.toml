@@ -17,11 +17,11 @@ theme = ["hugo-embed-pdf-shortcode", "digitalgarden"]
   url = '/articles'
   weight = 3
 [[menu.main]]
-  name = 'Portfolio'
+  name = 'Scripting and Automation Portfolio'
   url = '/portfolio'
   weight = 4
 [[menu.main]]
-  name = 'Sample Documentation'
+  name = 'Technical Services Documentation Archive'
   url = '/documentation'
   weight = 5
 [[menu.main]]
