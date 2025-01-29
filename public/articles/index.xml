@@ -9,6 +9,20 @@
     <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Getting Started with Git: Backing Up Your Python Scripts</title>
+      <link>http://localhost:1313/articles/gitting_started/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/gitting_started/</guid>
+      <description>&lt;p&gt;Hello again, and welcome to another post on my journey through the world of technical services and scripting! I’m Jason, and today I’m excited to talk about something that’s become an essential part of my workflow: using Git to back up my Python scripts.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re new to Git, you&amp;rsquo;re in good company. It can be a bit intimidating at first, but once you understand the basics, you’ll see how powerful and indispensable it is for version control and backing up your code. In this post, I’ll walk you through how I got started using Git to back up my Python scripts and why it’s a game changer for anyone developing software, no matter how simple or complex.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using `.env` Files in Python to Protect Private Information</title>
+      <link>http://localhost:1313/articles/securing_secrets/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/securing_secrets/</guid>
+      <description>&lt;p&gt;Hello again, and welcome back to my blog! It’s Jason here, and I’m excited to dive into a topic that’s crucial for anyone who works with sensitive data or APIs in Python scripts: keeping your private information safe using .env files.&lt;/p&gt;&#xA;&lt;p&gt;As you might know, I work in technical services at Loyola Marymount University, where I handle everything from metadata management to developing custom scripts. One of the recurring challenges I face is securely managing sensitive information—like API keys, database credentials, or personal tokens—that my scripts rely on. It’s a small but important detail that can make or break your workflow.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Welcome</title>
       <link>http://localhost:1313/articles/welcome/</link>
       <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>

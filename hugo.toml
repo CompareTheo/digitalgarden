@@ -1,7 +1,7 @@
 baseURL = 'https://mitchelldigitalgarden.netlify.app/'
 languageCode = 'en-us'
 title = 'Jason C. Mitchell'
-theme = 'digitalgarden'
+theme = ["hugo-embed-pdf-shortcode", "digitalgarden"]
 
 [menu]
 [[menu.main]]
@@ -21,13 +21,17 @@ theme = 'digitalgarden'
   url = '/portfolio'
   weight = 4
 [[menu.main]]
+  name = 'Sample Documentation'
+  url = '/documentation'
+  weight = 5
+[[menu.main]]
   name = 'Links'
   params.header = true
-  weight = 5
+  weight = 6
 [[menu.main]]
   name = 'Curriculum Vitae'
   url = 'https://drive.google.com/file/d/14Ihyw956NovkMWslJNZGWWF7hHJLoA3_/view?usp=share_link'
-  weight = 6
+  weight = 7
 
 
 [[menu.social]]
