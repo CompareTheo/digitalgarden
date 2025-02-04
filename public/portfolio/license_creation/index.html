@@ -40,14 +40,14 @@
   <meta itemprop="description" content="Uses the Alma License API to systematically create elelctronic resource license records.">
   <meta itemprop="datePublished" content="2024-05-20T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-05-20T00:00:00+00:00">
-  <meta itemprop="wordCount" content="306">
+  <meta itemprop="wordCount" content="447">
 
   
   <meta itemprop="name" content="Alma License Creation Script">
   <meta itemprop="description" content="Uses the Alma License API to systematically create elelctronic resource license records.">
   <meta itemprop="datePublished" content="2024-05-20T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-05-20T00:00:00+00:00">
-  <meta itemprop="wordCount" content="306">
+  <meta itemprop="wordCount" content="447">
 </head>
 <body class="flex relative h-full min-h-screen"><aside
   class="will-change-transform transform transition-transform -translate-x-full absolute top-0 left-0 md:relative md:translate-x-0 w-3/4 md:basis-60 h-full min-h-screen p-3 bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col gap-2.5 z-20 sidebar flex-shrink-0">
@@ -83,14 +83,6 @@
     </li>
     
     <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  text-slate-400 font-semibold pb-0 pl-1 border-b cursor-default pointer-events-none "
-        href="#" >
-        <span>Content</span>
-        
-      </a>
-    </li>
-    
-    <li>
       <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
         href="/articles" >
         <span>Articles</span>
@@ -108,25 +100,9 @@
     
     <li>
       <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
-        href="/documentation" >
-        <span>Technical Services Documentation Archive</span>
-        
-      </a>
-    </li>
-    
-    <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  text-slate-400 font-semibold pb-0 pl-1 border-b cursor-default pointer-events-none "
-        href="#" >
-        <span>Links</span>
-        
-      </a>
-    </li>
-    
-    <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
         href="https://drive.google.com/file/d/14Ihyw956NovkMWslJNZGWWF7hHJLoA3_/view?usp=share_link"  target="_blank"
         rel="noopener" >
-        <span>Curriculum Vitae</span>
+        <span>Brief Curriculum Vitae</span>
         
         <span><svg class="h-4 w-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
   fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -225,14 +201,37 @@
 
     
 
-    <h1 id="placeholder-text-example">Placeholder Text Example</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat dolor sit amet nunc dictum, a vehicula justo dapibus. Vivamus in lorem tincidunt, tincidunt justo a, tincidunt urna. Fusce interdum mauris ac interdum fermentum. Suspendisse sit amet tincidunt eros. Donec auctor turpis sit amet ante volutpat, id consequat eros sollicitudin. Sed at eros ac nisl aliquam vulputate. Nunc congue, enim non vehicula dictum, tortor felis varius leo, ut laoreet dui velit id turpis. Integer fringilla purus vitae arcu vehicula, eget varius erat pharetra.</p>
-<hr>
-<p>Maecenas mollis urna sit amet nisi tincidunt, et gravida purus tempor. Vivamus eget mi ut leo vulputate mollis. Integer laoreet nibh velit, eu iaculis ante vulputate id. In efficitur suscipit tortor, vel luctus ipsum interdum a. Quisque at ex vel tortor elementum facilisis et sit amet neque. Curabitur sollicitudin urna non tincidunt egestas. Nulla facilisi. Morbi a auctor dui. Etiam pretium mollis nisi ac rhoncus.</p>
-<hr>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget felis risus. Nulla consequat dui sed lectus luctus, in tempus enim varius. Sed sodales justo eget orci convallis, at viverra neque vestibulum. Mauris tempus ligula ut lectus tincidunt, sit amet vehicula dui fermentum. Vivamus nec facilisis elit, ac lacinia ligula. Nunc condimentum malesuada magna, ac tincidunt metus condimentum in. In vitae lectus at orci volutpat egestas. Nunc laoreet dolor et velit vestibulum, id vulputate odio scelerisque.</p>
-<hr>
-<p>Fusce ut ante ut nunc efficitur accumsan. Sed aliquet erat nec risus tempor, sed tincidunt sapien vehicula. Donec fringilla interdum sapien, at vehicula metus dictum eu. Vivamus scelerisque nisl at ante facilisis, at elementum nunc vestibulum. Nam convallis urna ac libero scelerisque, id fringilla ligula convallis. Aliquam vel leo vel velit rutrum lacinia. Proin ullamcorper nunc et libero pharetra, sed lacinia ipsum viverra. Donec euismod ante at turpis vulputate, sit amet tristique nisi posuere.</p>
+    <p>Managing electronic resource licenses efficiently is a crucial part of library acquisitions workflows. To streamline this process, I developed a set of Python scripts that automate the creation and submission of license records in Alma. These scripts take structured data from an Excel file, convert it into XML, split it into individual records, and push them to Alma’s API.</p>
+<p>This post breaks down how the three scripts—license_creation.py, license_split.py, and license_push.py—work together to automate license record management.</p>
+<p>Step 1: Converting Excel Data to XML (license_creation.py)
+The first step in this workflow is transforming structured license data from an Excel spreadsheet into an XML format that Alma can process. The license_creation.py script reads the Excel file and maps each row to an XML structure that mirrors Alma’s expected schema.</p>
+<p>Key features of this script:</p>
+<p>Reads data from an Excel file using pandas.
+Defines an XML structure using lxml.etree.
+Converts each row of the spreadsheet into a <license> element with relevant subfields, including license code, name, type, status, licensor, start date, and specific terms like interlibrary loan permissions, concurrent users, and renewal types.
+Writes the final XML structure to an output.xml file.
+This script ensures that license data is structured correctly before being submitted to Alma.</p>
+<p>Step 2: Splitting XML into Individual Files (license_split.py)
+Alma’s API processes one license record per request, so we need to split the output.xml file into separate files for each license entry. The license_split.py script handles this by:</p>
+<p>Parsing output.xml and extracting each <license> entry.
+Saving each <license> entry as its own XML file (e.g., license_1.xml, license_2.xml).
+Ensuring that each license record is structured as a standalone file, ready for API submission.
+This step is critical for handling multiple license records efficiently without requiring manual extraction.</p>
+<p>Step 3: Submitting License Records to Alma (license_push.py)
+Once the XML files are created, they need to be submitted to Alma’s acquisition API. The license_push.py script automates this process:</p>
+<p>Iterates through the directory containing XML license files.
+Reads each XML file and sends it to Alma using an HTTP POST request.
+Uses the Alma API’s license creation endpoint, ensuring that each license record is ingested properly.
+By automating API submissions, this script eliminates the need for manual data entry in Alma, reducing errors and saving time.</p>
+<p>Why This Matters
+These scripts work together to streamline license management in Alma by:</p>
+<ul>
+<li>Automating data conversion from spreadsheets to XML.</li>
+<li>Ensuring compliance with Alma’s structured data requirements.</li>
+<li>Breaking down bulk license data into individual records.</li>
+<li>Submitting records programmatically to Alma’s API.</li>
+</ul>
+<p>This automation not only reduces manual workload but also enhances data accuracy and consistency. By leveraging Python’s capabilities, libraries can optimize electronic resource management and ensure that license records are properly maintained in Alma.</p>
 
   </article>
 

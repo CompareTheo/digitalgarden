@@ -40,14 +40,14 @@
   <meta itemprop="description" content="Uses the WorldCat Search API to match ISBNs and retrieve Work IDs for reconciling editions and formats.">
   <meta itemprop="datePublished" content="2024-01-02T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-02T00:00:00+00:00">
-  <meta itemprop="wordCount" content="112">
+  <meta itemprop="wordCount" content="471">
 
   
   <meta itemprop="name" content="OCLC Work ID Retrieval Script">
   <meta itemprop="description" content="Uses the WorldCat Search API to match ISBNs and retrieve Work IDs for reconciling editions and formats.">
   <meta itemprop="datePublished" content="2024-01-02T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-02T00:00:00+00:00">
-  <meta itemprop="wordCount" content="112">
+  <meta itemprop="wordCount" content="471">
 </head>
 <body class="flex relative h-full min-h-screen"><aside
   class="will-change-transform transform transition-transform -translate-x-full absolute top-0 left-0 md:relative md:translate-x-0 w-3/4 md:basis-60 h-full min-h-screen p-3 bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col gap-2.5 z-20 sidebar flex-shrink-0">
@@ -83,14 +83,6 @@
     </li>
     
     <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  text-slate-400 font-semibold pb-0 pl-1 border-b cursor-default pointer-events-none "
-        href="#" >
-        <span>Content</span>
-        
-      </a>
-    </li>
-    
-    <li>
       <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
         href="/articles" >
         <span>Articles</span>
@@ -108,25 +100,9 @@
     
     <li>
       <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
-        href="/documentation" >
-        <span>Technical Services Documentation Archive</span>
-        
-      </a>
-    </li>
-    
-    <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  text-slate-400 font-semibold pb-0 pl-1 border-b cursor-default pointer-events-none "
-        href="#" >
-        <span>Links</span>
-        
-      </a>
-    </li>
-    
-    <li>
-      <a class="px-2 py-1.5 rounded-md text-sm flex items-center justify-between  hover:bg-slate-200 dark:hover:bg-slate-700 "
         href="https://drive.google.com/file/d/14Ihyw956NovkMWslJNZGWWF7hHJLoA3_/view?usp=share_link"  target="_blank"
         rel="noopener" >
-        <span>Curriculum Vitae</span>
+        <span>Brief Curriculum Vitae</span>
         
         <span><svg class="h-4 w-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
   fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -225,10 +201,48 @@
 
     
 
-    <p>Tiramisu sprinkles marzipan lollipop marzipan dolor. Jelly candy marzipan vanilla candy ipsum. Sugar croissant lollipop vanilla cream marzipan. Sprinkles croissant cream dolor jelly marzipan.</p>
-<p>Pastry jelly cookie sugar donut orange. Candy sweet cookie sweet donut marzipan. Vanilla cookie sprinkles pastry orange cookie. Marzipan donut ipsum sugar biscuit vanilla.</p>
-<p>Candy cookie muffin pastry lollipop vanilla. Apple orange tiramisu jelly ipsum sugar. Candy cake orange ipsum orange muffin. Sugar pastry orange cream orange pastry.</p>
-<p>Marzipan vanilla cookie biscuit jelly muffin ipsum cream vanilla tiramisu. Marzipan vanilla sweet tiramisu pastry cake jelly jelly pastry cake. Cookie sweet donut candy pastry apple dolor orange lollipop biscuit. Muffin cream ipsum ipsum sprinkles sugar tiramisu pastry sweet tiramisu.</p>
+    <p>Libraries rely on accurate metadata to manage collections, align bookstore adoption lists with their catalogs, and reconcile electronic and physical holdings. However, matching titles across various editions and formats remains a persistent challenge for technical services staff. The OCLC Work ID serves as a crucial data point for disambiguating records, grouping related editions, and enhancing bibliographic consistency.</p>
+<p>To address this challenge, I developed a script that automates the retrieval of Work IDs using OCLC’s WorldCat Search API v.2. This tool enables library staff to efficiently identify and compare records based on ISBNs, improving metadata management and acquisitions workflows.</p>
+<h3 id="project-overview">Project Overview</h3>
+<p>This project consists of scripts designed to process user-selected input files (.xlsx and .mrc), query OCLC’s WorldCat Search API, and extract the corresponding Work ID for each title. By leveraging OCLC’s metadata services, the script provides a structured approach to normalizing bibliographic data across diverse sources.</p>
+<h3 id="why-work-ids-matter">Why Work IDs Matter</h3>
+<p>The OCLC Work ID functions as a unique identifier that links different manifestations of a work, regardless of format or edition. This allows libraries to:</p>
+<ol>
+<li>Reduce duplication when evaluating electronic versus print holdings.</li>
+<li>Identify related records that share common intellectual content.</li>
+<li>Improve reporting accuracy when aligning course-adopted textbooks with library resources.</li>
+</ol>
+<h3 id="key-features">Key Features</h3>
+<h4 id="batch-processing-of-bibliographic-data">Batch Processing of Bibliographic Data</h4>
+<p>The script supports both Excel (.xlsx) and MARC (.mrc) file formats, enabling batch queries for multiple titles at once.</p>
+<h4 id="automated-queries-via-worldcat-search-api-v2">Automated Queries via WorldCat Search API v.2</h4>
+<p>The script uses the API to match ISBNs against WorldCat records and retrieve the associated Work ID, streamlining metadata reconciliation.</p>
+<h4 id="enhanced-accuracy-in-title-matching">Enhanced Accuracy in Title Matching</h4>
+<p>By referencing Work IDs, the script minimizes errors caused by slight title variations, helping libraries maintain consistent cataloging practices.</p>
+<h4 id="configurable-authentication-and-api-access">Configurable Authentication and API Access</h4>
+<p>The script integrates OAuth 2.0 authentication, ensuring secure access to OCLC’s metadata services.</p>
+<h3 id="getting-started">Getting Started</h3>
+<h4 id="dependencies">Dependencies</h4>
+<p>To use this script, your institution must have:</p>
+<ul>
+<li>An OCLC Cataloging and Metadata subscription (full cataloging).</li>
+<li>A FirstSearch/WorldCat Discovery subscription.</li>
+<li>An API client ID and secret obtained from OCLC.</li>
+</ul>
+<h4 id="configuration">Configuration</h4>
+<p>The script requires a config.yml file containing:</p>
+<ul>
+<li>key: Your API key.</li>
+<li>secret: Your API secret.</li>
+<li>auth_url: The authentication endpoint.</li>
+<li>token_url: The token request URL.</li>
+<li>metadata_service_url: The OCLC metadata service endpoint.</li>
+</ul>
+<p>A sample configuration file is available in OCLC’s Developer Network GitHub repository.</p>
+<h3 id="license--acknowledgments">License &amp; Acknowledgments</h3>
+<p>This project is licensed under the Apache-2.0 License. The OAuth 2.0 authentication code was originally developed by Karen Coombs and has not been substantially altered from its original form. All other development, workflow design, and implementation are my own work.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>By automating Work ID retrieval, this script simplifies complex bibliographic comparisons and enhances collection management efficiency. As libraries continue refining their metadata workflows, tools like this offer valuable support for maintaining accurate and accessible catalogs. I hope this project provides a practical solution for fellow technical services professionals navigating the intricacies of bibliographic data reconciliation.</p>
 
   </article>
 

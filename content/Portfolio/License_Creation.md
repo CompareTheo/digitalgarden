@@ -4,18 +4,42 @@ date: 2024-05-20
 images:
 description: Uses the Alma License API to systematically create elelctronic resource license records. 
 ---
-# Placeholder Text Example
+Managing electronic resource licenses efficiently is a crucial part of library acquisitions workflows. To streamline this process, I developed a set of Python scripts that automate the creation and submission of license records in Alma. These scripts take structured data from an Excel file, convert it into XML, split it into individual records, and push them to Alma’s API.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat dolor sit amet nunc dictum, a vehicula justo dapibus. Vivamus in lorem tincidunt, tincidunt justo a, tincidunt urna. Fusce interdum mauris ac interdum fermentum. Suspendisse sit amet tincidunt eros. Donec auctor turpis sit amet ante volutpat, id consequat eros sollicitudin. Sed at eros ac nisl aliquam vulputate. Nunc congue, enim non vehicula dictum, tortor felis varius leo, ut laoreet dui velit id turpis. Integer fringilla purus vitae arcu vehicula, eget varius erat pharetra.
+This post breaks down how the three scripts—license_creation.py, license_split.py, and license_push.py—work together to automate license record management.
 
----
+Step 1: Converting Excel Data to XML (license_creation.py)
+The first step in this workflow is transforming structured license data from an Excel spreadsheet into an XML format that Alma can process. The license_creation.py script reads the Excel file and maps each row to an XML structure that mirrors Alma’s expected schema.
 
-Maecenas mollis urna sit amet nisi tincidunt, et gravida purus tempor. Vivamus eget mi ut leo vulputate mollis. Integer laoreet nibh velit, eu iaculis ante vulputate id. In efficitur suscipit tortor, vel luctus ipsum interdum a. Quisque at ex vel tortor elementum facilisis et sit amet neque. Curabitur sollicitudin urna non tincidunt egestas. Nulla facilisi. Morbi a auctor dui. Etiam pretium mollis nisi ac rhoncus.
+Key features of this script:
 
----
+Reads data from an Excel file using pandas.
+Defines an XML structure using lxml.etree.
+Converts each row of the spreadsheet into a <license> element with relevant subfields, including license code, name, type, status, licensor, start date, and specific terms like interlibrary loan permissions, concurrent users, and renewal types.
+Writes the final XML structure to an output.xml file.
+This script ensures that license data is structured correctly before being submitted to Alma.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget felis risus. Nulla consequat dui sed lectus luctus, in tempus enim varius. Sed sodales justo eget orci convallis, at viverra neque vestibulum. Mauris tempus ligula ut lectus tincidunt, sit amet vehicula dui fermentum. Vivamus nec facilisis elit, ac lacinia ligula. Nunc condimentum malesuada magna, ac tincidunt metus condimentum in. In vitae lectus at orci volutpat egestas. Nunc laoreet dolor et velit vestibulum, id vulputate odio scelerisque.
+Step 2: Splitting XML into Individual Files (license_split.py)
+Alma’s API processes one license record per request, so we need to split the output.xml file into separate files for each license entry. The license_split.py script handles this by:
 
----
+Parsing output.xml and extracting each <license> entry.
+Saving each <license> entry as its own XML file (e.g., license_1.xml, license_2.xml).
+Ensuring that each license record is structured as a standalone file, ready for API submission.
+This step is critical for handling multiple license records efficiently without requiring manual extraction.
 
-Fusce ut ante ut nunc efficitur accumsan. Sed aliquet erat nec risus tempor, sed tincidunt sapien vehicula. Donec fringilla interdum sapien, at vehicula metus dictum eu. Vivamus scelerisque nisl at ante facilisis, at elementum nunc vestibulum. Nam convallis urna ac libero scelerisque, id fringilla ligula convallis. Aliquam vel leo vel velit rutrum lacinia. Proin ullamcorper nunc et libero pharetra, sed lacinia ipsum viverra. Donec euismod ante at turpis vulputate, sit amet tristique nisi posuere.
+Step 3: Submitting License Records to Alma (license_push.py)
+Once the XML files are created, they need to be submitted to Alma’s acquisition API. The license_push.py script automates this process:
+
+Iterates through the directory containing XML license files.
+Reads each XML file and sends it to Alma using an HTTP POST request.
+Uses the Alma API’s license creation endpoint, ensuring that each license record is ingested properly.
+By automating API submissions, this script eliminates the need for manual data entry in Alma, reducing errors and saving time.
+
+Why This Matters
+These scripts work together to streamline license management in Alma by:
+- Automating data conversion from spreadsheets to XML.
+- Ensuring compliance with Alma’s structured data requirements.
+- Breaking down bulk license data into individual records.
+- Submitting records programmatically to Alma’s API.
+
+This automation not only reduces manual workload but also enhances data accuracy and consistency. By leveraging Python’s capabilities, libraries can optimize electronic resource management and ensure that license records are properly maintained in Alma.

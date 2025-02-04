@@ -9,25 +9,18 @@
     <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started with Git: Backing Up Your Python Scripts</title>
-      <link>http://localhost:1313/articles/gitting_started/</link>
-      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/gitting_started/</guid>
-      <description>&lt;p&gt;Hello again, and welcome to another post on my journey through the world of technical services and scripting! I’m Jason, and today I’m excited to talk about something that’s become an essential part of my workflow: using Git to back up my Python scripts.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re new to Git, you&amp;rsquo;re in good company. It can be a bit intimidating at first, but once you understand the basics, you’ll see how powerful and indispensable it is for version control and backing up your code. In this post, I’ll walk you through how I got started using Git to back up my Python scripts and why it’s a game changer for anyone developing software, no matter how simple or complex.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Using `.env` Files in Python to Protect Private Information</title>
-      <link>http://localhost:1313/articles/securing_secrets/</link>
-      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/securing_secrets/</guid>
-      <description>&lt;p&gt;Hello again, and welcome back to my blog! It’s Jason here, and I’m excited to dive into a topic that’s crucial for anyone who works with sensitive data or APIs in Python scripts: keeping your private information safe using .env files.&lt;/p&gt;&#xA;&lt;p&gt;As you might know, I work in technical services at Loyola Marymount University, where I handle everything from metadata management to developing custom scripts. One of the recurring challenges I face is securely managing sensitive information—like API keys, database credentials, or personal tokens—that my scripts rely on. It’s a small but important detail that can make or break your workflow.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Welcome</title>
       <link>http://localhost:1313/articles/welcome/</link>
       <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/articles/welcome/</guid>
       <description>&lt;p&gt;Hello, and welcome to my articles! I&amp;rsquo;m thrilled to have you here. My name is Jason, and I am the library assistant for electronic resources at Loyola Marymount University in Los Angeles, California. I am incredibly passionate about the intersection of technology and library science.&lt;/p&gt;&#xA;&lt;p&gt;In my day-to-day work, I handle a range of tasks, from updating the LibGuides A-Z list and troubleshooting electronic resource access issues to developing custom scripts for metadata harvest. I frequently interface with library stakeholders and vendors to resolve issues, develop systems-based approaches to manage metadata, and create custom scripts for ensuring metadata compliance. Additionally, I’ve been involved in creating procedural documentation, analyzing workflows, and spearheading assessments to improve acquisition workflows, especially after our Integrated Library System (ILS) migration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Choosing Python as My Primary Scriptng Language</title>
+      <link>http://localhost:1313/articles/choosing_python/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/choosing_python/</guid>
+      <description>&lt;p&gt;As someone who spends a significant amount of time managing metadata, troubleshooting electronic resource access, and creating custom tools for library workflows, scripting has become an indispensable part of my professional toolkit. Early in my journey, I made the decision to adopt Python as my primary scripting language, a choice that has shaped how I approach problem-solving and automation in technical services. But like any decision, it’s worth revisiting periodically to ensure it still aligns with my needs and goals. Lately, I’ve been broadening my horizons, exploring other scripting languages, particularly Bash, and reflecting on what Python offers compared to other tools.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
