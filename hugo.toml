@@ -1,4 +1,4 @@
-baseURL = 'https://jasoncmitchell.com'
+baseURL = 'https://www.jasoncmitchell.com'
 languageCode = 'en-us'
 title = 'Jason C. Mitchell'
 theme = ["hugo-embed-pdf-shortcode", "digitalgarden"]
